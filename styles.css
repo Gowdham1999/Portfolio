@@ -6,23 +6,29 @@
 }
 
 body {
-  font-family: 'poppins';
+  font-family: 'Raleway';
   max-height: 100vh;
   background-color: black;
+  font-weight: 100 !important;
 }
 
-.page-1 {
-  height: 100vh;
+.page-1,
+.page-2,
+.page-3,
+.page-4 {
+  min-height: 100vh;
   font-family: 'Raleway', sans-serif;
   color: white;
 }
 
-.page-1>h1 {
+.page-1 h1,
+.page-3>h1,
+.page-4>h1 {
   font-size: 64px;
   font-weight: 100;
 }
 
-.page-1>h2 {
+.page-1 h2 {
   font-weight: 100;
 }
 
@@ -108,4 +114,227 @@ button:hover .circle .icon.arrow {
 
 button:hover .button-text {
   color: #282936;
+}
+
+
+/*! Page 2 - Experience */
+
+.page-2>h1 {
+  font-size: 64px;
+  font-weight: 100;
+}
+
+.page-2>h2,
+h5 {
+  font-weight: 100;
+}
+
+/*Timeline*/
+.timeline {
+  position: relative;
+  margin: 50px auto;
+  padding: 40px 0;
+  width: 100%;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background-color: #e4e4e4;
+}
+
+.timeline ul li:hover .time {
+  transform: scale(1.1);
+}
+
+/*Elementos de lista*/
+.timeline ul li {
+  list-style: none;
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+}
+
+.timeline ul li:nth-child(odd) {
+  float: left;
+  text-align: right;
+  clear: both;
+}
+
+.timeline ul li:nth-child(even) {
+  float: right;
+  text-align: left;
+  clear: both;
+}
+
+/*Circulo indicador*/
+.timeline ul li::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  width: 10px;
+  height: 10px;
+  background-color: var(--light-green-background);
+  border-radius: 50%;
+  box-shadow: 0 0 0 3px var(--dark-green-background);
+}
+
+.timeline ul li:nth-child(odd)::before {
+  right: 10px;
+}
+
+.timeline ul li:nth-child(even)::before {
+  left: -20px;
+}
+
+.timeline ul li:hover::before {
+  transform: scale(1.5);
+}
+
+/*Fecha*/
+.time {
+  display: inline-block;
+  /* font-weight: 400; */
+  font-size: 14px;
+  padding: 5px 10px;
+  /* margin-bottom: 15px; */
+  color: var(--dark-green-background);
+  border-radius: 20px;
+  border: none;
+}
+
+h3 {
+  font-weight: 400;
+}
+
+/*Contenido*/
+.content {
+  padding-bottom: 20px;
+}
+
+.timeline ul li h2 {
+  font-weight: 500;
+  color: var(--dark-green-background);
+}
+
+.timeline ul li p {
+  margin: 10px 0;
+  font-weight: 300;
+}
+
+/*! Certifications Page */
+.list-ic a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.list-ic li {
+  position: relative;
+}
+
+.list-ic li span {
+  display: inline-block;
+  font-weight: 800;
+  width: 2em;
+  height: 2em;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 1em;
+  background: var(--dark-green-background);
+  color: black;
+  position: relative;
+}
+
+.list-ic li::before {
+  content: '';
+  position: absolute;
+  background: var(--dark-green-background);
+  z-index: -1;
+}
+
+.list-ic.horizontal li {
+  display: inline-block;
+}
+
+.list-ic.horizontal li span {
+  margin: 0 1em;
+}
+
+.list-ic.horizontal li::before {
+  top: 0.9em;
+  left: -25px;
+  width: 4em;
+  height: 0.2em;
+}
+
+.list-ic.vertical {
+  padding: 0;
+  margin: 0;
+}
+
+.list-ic.vertical li {
+  list-style-type: none;
+  text-align: left;
+}
+
+.list-ic.vertical li span {
+  margin: 2.5em 0;
+}
+
+.list-ic.vertical li::before {
+  top: -35px;
+  left: 13px;
+  width: 0.2em;
+  height: 4em;
+}
+
+.list-ic li:first-child::before {
+  display: none;
+}
+
+.list-ic .active {
+  background: dodgerblue;
+}
+
+.list-ic .active~li {
+  background: lightblue;
+}
+
+.list-ic .active~li::before {
+  background: lightblue;
+}
+
+.contact-me>h2 {
+  color: var(--dark-green-background);
+}
+
+.contact-me>a {
+  font-size: 20px;
+}
+
+.contact-me>span {
+  color: var(--dark-green-background);
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.linkedin-image {
+  margin-top: -5px;
+  width: 20px
+}
+
+.about-me-container {
+  margin-top: 25vh;
+}
+
+.about-me-container>h3 {
+  font-weight: 300;
+}
+
+.about-me-container>h4 {
+  font-weight: 100;
 }
